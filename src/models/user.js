@@ -68,7 +68,7 @@ userSchema.methods.toJSON = function(){
 
 userSchema.methods.generateAuthToken = async function() {
     const user = this;
-    const token = jwt.sign({ _id: user._id.toString() }, 'thisismynewcourse');  // xrhsimopoiw toString() gia na metatrepsw to id se object id
+    const token = jwt.sign({ _id: user._id.toString() }, 'thisismytask');  // xrhsimopoiw toString() gia na metatrepsw to id se object id
                                                                                // mias kai to jwt den to katalavainei
     
     user.tokens = user.tokens.concat({ token })
